@@ -11,20 +11,28 @@ import collections
 
 
 def solve():
-    # n = int(input())
-    n, k= map(int, input().split())
-    a = [int(i) for i in input().split()][:n]
+    n = int(input())
+    # n, k= map(int, input().split())
+    # a = [int(i) for i in input().split()][:n]
     # s = input()
+    count = 0
+    for i in range(2, (n // 2)+1):
+        if n % i == 0:
+            count = count + 1
+            break
 
-    if k in a:
-        print("YES")
+    print(count)
+    if count > 0:
+        print("Not prime")
+    elif count == 0 and n != 1:
+        print("Prime number")
     else:
-        print("NO")
+        print("Not prime")
 
 
 def main():
-    t = int(input())
-    # t = 1
+    # t = int(input())
+    t = 1
     for _ in range(t):
         # check()
         solve()
