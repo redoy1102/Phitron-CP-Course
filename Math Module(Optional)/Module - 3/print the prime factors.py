@@ -8,4 +8,4 @@ while num > 1:
     else:
         i += 1
 
-print(factors)
+print(factors.count(100))
