@@ -7,4 +7,6 @@ int main(){
     int numbers[10];
     int sn = sizeof(numbers) / sizeof(int);
     printf("Size of numbers: %d", sn);
+
+    return 0;
 }
