@@ -1,8 +1,9 @@
 #include<stdio.h>
 #include<limits.h>
 int main(){
-    char ch[100];
+    char ch[5];
     fgets(ch, 5, stdin);
+
     printf("%s", ch);
 
 
