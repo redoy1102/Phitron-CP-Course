@@ -1,9 +1,8 @@
 #include<stdio.h>
 int main(){
-    long long a, b;
-    scanf("%lld%lld", &a, &b);
-
-    printf("%lld", a*b);
+    char ch = '0';
+    int as = ch;
+    printf("%d", as);
 
 
     return 0;
