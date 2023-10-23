@@ -1,0 +1,1 @@
+{"name":"Local: count100","url":"h:\\Phitron-CP-Course\\Week - 03\\Module - 11\\count100.c","tests":[{"id":1698072250888,"input":"5\n1 2 100 3 100","output":"100 - 2"}],"interactive":false,"memoryLimit":1024,"timeLimit":3000,"srcPath":"h:\\Phitron-CP-Course\\Week - 03\\Module - 11\\count100.c","group":"local","local":true}
