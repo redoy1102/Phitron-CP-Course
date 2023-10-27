@@ -1,0 +1,1 @@
+{"name":"Local: selectionSort","url":"h:\\Phitron-CP-Course\\Week - 04\\Module - 13\\selectionSort.c","tests":[{"id":1698415995392,"input":"5\n5 4 3 2 1","output":"1 2 3 4 5"}],"interactive":false,"memoryLimit":1024,"timeLimit":3000,"srcPath":"h:\\Phitron-CP-Course\\Week - 04\\Module - 13\\selectionSort.c","group":"local","local":true}
