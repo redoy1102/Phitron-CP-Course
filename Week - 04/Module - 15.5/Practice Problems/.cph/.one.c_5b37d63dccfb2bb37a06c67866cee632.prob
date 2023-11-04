@@ -1,0 +1,1 @@
+{"name":"Local: one","url":"d:\\Phitron-CP-Course\\Week - 04\\Module - 15.5\\Practice Problems\\one.c","tests":[{"id":1699113196480,"input":"5","output":"5"},{"id":1699113203685,"input":"-7","output":"7"}],"interactive":false,"memoryLimit":1024,"timeLimit":3000,"srcPath":"d:\\Phitron-CP-Course\\Week - 04\\Module - 15.5\\Practice Problems\\one.c","group":"local","local":true}
