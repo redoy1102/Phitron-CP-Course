@@ -1,8 +1,8 @@
 #include<stdio.h>
+#include<string.h>
 int main(){
-    char ch = '0';
-    int as = ch;
-    printf("%d", as);
+    char ch[3] = "ab";
+    printf("%d", strlen(ch));
 
 
     return 0;
