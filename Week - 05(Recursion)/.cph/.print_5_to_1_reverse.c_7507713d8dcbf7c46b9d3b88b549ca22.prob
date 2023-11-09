@@ -1,0 +1,1 @@
+{"name":"Local: print_5_to_1_reverse","url":"d:\\Phitron-CP-Course\\Week - 05(Recursion)\\print_5_to_1_reverse.c","tests":[{"id":1699535078206,"input":"1","output":"5\n4\n3\n2\n1"}],"interactive":false,"memoryLimit":1024,"timeLimit":3000,"srcPath":"d:\\Phitron-CP-Course\\Week - 05(Recursion)\\print_5_to_1_reverse.c","group":"local","local":true}
