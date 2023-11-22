@@ -2,7 +2,8 @@
 #include<string.h>
 
 void fun(int i){
-    if(i == 6){
+    if(i == 6)
+    {
         return;
     }
     printf("%d\n", i);
