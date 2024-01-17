@@ -57,15 +57,21 @@ void insert_new_head(Node *&head, int num){
 }
 void delete_node(Node *&head, int p){
     Node *temp = head;
+    
     for (int i = 1; i < p - 1;i++){
         temp = temp->next;
     }
-        Node *d = temp->next;
+    Node *d = temp->next;
     temp->next = temp->next->next;
     delete d;
 
     cout << "Position " << p << " has been deleted" << endl
          << endl;
+}
+void delete_head(Node *&head){
+    Node *d = head;
+    head = head->next;
+    cout << "\nHead deleted\n" << endl;
 }
 int main(){
     Node *head = NULL;
@@ -76,7 +82,8 @@ int main(){
         cout << "3. Insert at any position." << endl;
         cout << "4. Insert new head" << endl;
         cout << "5. Delete a node" << endl;
-        cout << "6. Break" << endl;
+        cout << "6. Delete head" << endl;
+        cout << "7. Break" << endl;
         cout << "Enter your option: ";
         int op;
         cin >> op;
@@ -111,8 +118,14 @@ int main(){
             int p;
             cout << "Insert the position that you want to delete: ";
             cin >> p;
-
-            delete_node(head, p);
+            if(p==1)
+                delete_head(head);
+            else{
+                delete_node(head, p);
+            }
+        }
+        else if(op==6){
+            delete_head(head);
         }
         else{
             break;
