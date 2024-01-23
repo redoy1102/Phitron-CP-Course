@@ -1,28 +1,12 @@
-#include<bits/stdc++.h>
+#include <bits/stdc++.h>
 using namespace std;
-class Node{
-    public:
-        int v;
-        Node *next;
-        Node(int v){
-            this->v = v;
-            this->next = NULL;
-        }
-};
-void print_linked_list(Node *head){
-    Node *temp = head;
-    while (temp!=NULL)
-    {
-        cout << temp->v << " ";
-        temp = temp->next;
-    }
-    
+void fun(int *&p){
+    p = NULL;
 }
-int main(){
-    Node *head = NULL;
-    
-
-    print_linked_list(head);
-
+int main() {
+    int val = 10;
+    int *ptr = &val;
+    fun(ptr);
+    cout << *ptr << endl;
     return 0;
 }

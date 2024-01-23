@@ -11,45 +11,38 @@ class Node{
 };
 void insert_at_tail(Node *&head, int v){
     Node *newNode = new Node(v);
-    if (head==NULL)
-    {
+    if(head == NULL){
         head = newNode;
         return;
     }
-    
     Node *temp = head;
-    while (temp->next!=NULL)
-    {
+    while(temp->next!=NULL){
         temp = temp->next;
     }
     temp->next = newNode;
 }
-
-void print_linked_list(Node *head){
-    Node *temp = head;
-    cout << "Linked list: ";
-    while (temp!=NULL)
-    {
-        cout << temp->v << " ";
+int size(Node *head){
+    Node *temp=head;
+    int c = 0;
+    while(temp != NULL){
         temp = temp->next;
+        c++;
     }
-    
+    return c;
 }
 int main(){
     Node *head = NULL;
     int v;
-    while (true)
-    {
+    while(true){
         cin >> v;
-        if (v==-1)
-        {
+        if(v==-1){
             break;
         }
         else{
             insert_at_tail(head, v);
         }
     }
-    print_linked_list(head);
+    cout << size(head);
 
     return 0;
 }

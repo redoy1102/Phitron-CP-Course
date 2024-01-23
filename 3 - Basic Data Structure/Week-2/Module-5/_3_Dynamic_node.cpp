@@ -9,23 +9,15 @@ class Node{
         this->next = NULL;
     }
 };
-// void solve(){
-    
-// }
 int main(){
     Node *head = new Node(10);
     Node *a = new Node(20);
-    head->next = a;
-    cout << head->value<<endl;
-    // cout << a->value;
-    cout << head->next->value;
+    Node *b = new Node(30);
+    Node *c = new Node(40);
 
-    int t;
-    // cin >> t;
-    t = 1;
-    // while(t--){
-    //     solve();
-    // }
+    head->next = a;
+
+    cout << head->next->value;
 
     return 0;
 }
