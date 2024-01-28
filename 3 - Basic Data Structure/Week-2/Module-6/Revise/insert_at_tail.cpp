@@ -47,6 +47,24 @@ void insert_at_head(Node *&head, int v){
          << "Head inserted" << endl
          << endl;
 }
+void delete_position(Node *&head, int p){
+    Node *temp = head;
+    for (int i = 1; i <= p - 1; i++){
+        temp = temp->next;
+    }
+    Node *del = temp->next;
+    temp->next = temp->next->next;
+    delete del;
+    cout << endl
+         << "Deleted" << endl
+         << endl;
+}
+void delete_head(Node *&head){
+    Node *dh = head;
+    head = head->next;
+    delete dh;
+}
+
 int main(){
     Node *head = NULL;
     while (true)
@@ -55,6 +73,8 @@ int main(){
         cout << "Press-2 for insert at tail\n";
         cout << "Press-3 to insert at any position.\n";
         cout << "Press-4 to insert at head.\n";
+        cout << "Press-5 to delete a node.\n";
+        cout << "Press-6 to delete the head\n";
         cout << "Press-0 for stop.\n";
         int opt;
         cout << "Press Now = ";
@@ -90,6 +110,21 @@ int main(){
             cout << "Enter a value: ";
             cin >> v;
             insert_at_head(head, v);
+        }
+        else if(opt == 5){
+            int p;
+            cout << "Enter the index number: ";
+            cin >> p;
+            if(p==0){
+                delete_head(head);
+            }
+            else{
+                delete_position(head, p);
+            }
+        }
+        else if(opt == 6)
+        {
+            delete_head(head);
         }
         else{
             break;
