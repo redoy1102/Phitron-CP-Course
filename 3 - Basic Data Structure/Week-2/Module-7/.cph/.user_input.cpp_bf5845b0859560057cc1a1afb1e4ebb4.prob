@@ -1,0 +1,1 @@
+{"name":"Local: user_input","url":"d:\\Phitron-CP-Course\\3 - Basic Data Structure\\Week-2\\Module-7\\user_input.cpp","tests":[{"id":1706728619823,"input":"10 20 30 40 50 -1","output":"10 20 30 40 50"}],"interactive":false,"memoryLimit":1024,"timeLimit":3000,"srcPath":"d:\\Phitron-CP-Course\\3 - Basic Data Structure\\Week-2\\Module-7\\user_input.cpp","group":"local","local":true}
