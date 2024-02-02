@@ -60,7 +60,7 @@ void delete_node(Node *&head, int p){
     for (int i = 1; i < p - 1;i++){
         temp = temp->next;
     }
-        Node *d = temp->next;
+    Node *d = temp->next;
     temp->next = temp->next->next;
     delete d;
 
