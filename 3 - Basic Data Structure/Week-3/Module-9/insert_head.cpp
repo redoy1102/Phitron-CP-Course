@@ -11,23 +11,40 @@ class Node{
         this->pre = NULL;
     }
 };
-void insert_head(Node *&head, int v){
+
+void insert_head(Node *&head, Node *&tail, int v){
     Node *nd = new Node(v);
     if(head==NULL){
         head = nd;
+        tail = nd;
         return;
     }
     nd->next = head;
     head->pre = nd;
     head = nd;
 }
-void insert_at_any_pos(Node *&head, int s){
+
+void insert_tail(Node *&tail, int v){
+    Node *nd = new Node(v);
+    tail->next = nd;
+    nd->pre = tail;
+    tail = tail->next;
+}
+
+void insert_at_any_pos(Node *&head, Node *&tail, int s){
     int p;
+    cout << "Enter the position: ";
     cin >> p;
     int v;
+    cout << "Enter your value: ";
     cin >> v;
+
     if(p==0){
-        insert_head(head, v);
+        insert_head(head, tail, v);
+        return;
+    }
+    else if(p==s){
+        insert_tail(tail, v);
         return;
     }
     else if(p>=s){
@@ -45,6 +62,7 @@ void insert_at_any_pos(Node *&head, int s){
     nd->pre = temp;
     nd->next->pre = nd;
 }
+
 int size(Node *head){
     Node *temp = head;
     int cnt = 0;
@@ -54,24 +72,39 @@ int size(Node *head){
     }
     return cnt;
 }
+
 void right_print(Node *head){
     Node *temp = head;
     while(temp != NULL){
         cout << temp->value << " ";
         temp = temp->next;
     }
+    cout << endl << endl;
 }
-int main(){
-    Node *head = new Node(10);
-    Node *a = new Node(20);
-    Node *b = new Node(30);
-    head->next = a;
-    a->pre = head;
-    a->next = b;
-    b->pre = a;
 
-    insert_at_any_pos(head, size(head));
-    right_print(head);
+int main(){
+    Node *head = NULL;
+    Node *tail = NULL;
+    while(true){
+        cout << "Press-1 for print." << endl;
+        cout << "Press-2 for insert" << endl;
+        cout << "Press-3 for reverse." << endl << endl;
+
+        int opt;
+        cin >> opt;
+        if (opt==1)
+        {
+            right_print(head);   
+        }
+        else if(opt==2)
+        {
+            insert_at_any_pos(head, tail, size(head));
+        }
+        else if(opt==-1)
+        {
+            break;
+        }
+    }
 
     return 0;
 }
