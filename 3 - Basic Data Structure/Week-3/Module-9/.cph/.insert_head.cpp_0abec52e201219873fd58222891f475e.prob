@@ -1,0 +1,1 @@
+{"name":"Local: insert_head","url":"d:\\Phitron-CP-Course\\3 - Basic Data Structure\\Week-3\\Module-9\\insert_head.cpp","tests":[{"id":1708181666216,"input":"2\n1\n2\n2\n2\n3\n1","output":"1 2 3"}],"interactive":false,"memoryLimit":1024,"timeLimit":3000,"srcPath":"d:\\Phitron-CP-Course\\3 - Basic Data Structure\\Week-3\\Module-9\\insert_head.cpp","group":"local","local":true}

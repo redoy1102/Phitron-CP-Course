@@ -47,7 +47,7 @@ void insert_at_any_pos(Node *&head, Node *&tail, int s){
         insert_tail(tail, v);
         return;
     }
-    else if(p>=s){
+    else if(p>s){
         cout << "Invalid position" << endl;
         return;
     }
@@ -82,23 +82,70 @@ void right_print(Node *head){
     cout << endl << endl;
 }
 
+void delete_head(Node *&head){
+    Node *dh = head;
+    head=head->next;
+    head->pre = NULL;
+    delete dh;
+}
+
+void delete_tail(Node *&tail){
+    Node *dt = tail;
+    tail = tail->pre;
+    tail->next = NULL;
+    delete dt;
+}
+
+void delete_linked(Node *&head, Node*&tail, int p, int s){
+    if(p>=s){
+        cout << "Invalid position" << endl;
+        return;
+    }
+    else if(p==0){
+        delete_head(head);
+        return;
+    }
+    else if(p==(s-1)){
+        delete_tail(tail);
+        return;
+    }
+    Node *t = head;
+    for (int i = 1; i <= p - 1; i++){
+        t = t->next;
+    }
+    Node *dn = t->next;
+    t->next = t->next->next;
+    t->next->pre = t;
+    delete dn;
+}
+
 int main(){
     Node *head = NULL;
     Node *tail = NULL;
     while(true){
         cout << "Press-1 for print." << endl;
         cout << "Press-2 for insert" << endl;
-        cout << "Press-3 for reverse." << endl << endl;
+        cout << "Press-3 for delete" << endl;
+        cout << "Press-5 for size" << endl;
+        cout << "Press-4 for reverse" << endl << endl;
 
         int opt;
         cin >> opt;
         if (opt==1)
         {
-            right_print(head);   
+            right_print(head);
         }
         else if(opt==2)
         {
             insert_at_any_pos(head, tail, size(head));
+        }
+        else if(opt==3){
+            int p;
+            cin >> p;
+            delete_linked(head, tail, p, size(head));
+        }
+        else if(opt==5){
+            cout<<size(head)<<endl;
         }
         else if(opt==-1)
         {
