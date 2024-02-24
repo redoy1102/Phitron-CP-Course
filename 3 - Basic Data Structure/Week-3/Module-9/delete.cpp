@@ -47,16 +47,22 @@ void right_print(Node *head){
         temp = temp->next;
     }
 }
-void delete_head(Node *&head){
+void delete_head(Node *&head, Node *&tail){
     Node *dh = head;
     head=head->next;
-    head->pre = NULL;
     delete dh;
+    if(head == NULL)
+    {
+        tail = NULL;
+        return;
+    }
+    head->pre = NULL;
 }
 
-void delete_linked(Node *&head, int p){
-    if(p==0){
-        delete_head(head);
+void delete_linked(Node *&head, Node *&tail, int p){
+    if(p==0)
+    {
+        delete_head(head, tail);
     }
 }
 int main(){

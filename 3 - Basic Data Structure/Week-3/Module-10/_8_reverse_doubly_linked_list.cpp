@@ -32,26 +32,32 @@ void print(Node *head){
     }
 }
 
-void reverse(Node *head, Node *tail){
+void reverse(Node *head, Node *tail)
+{
     Node *i = head;
     Node *j = tail;
-    while(i != j && i->next != j){
+    while(i != j && i->next != j)
+    {
         swap(i->v, j->v);
         i = i->next;
         j = j->pre;
     }
+    swap(i->v, j->v);
 }
+
 void solve(){
     Node *head = NULL;
     Node *tail = NULL;
-    while(true){
+    while(true)
+    {
         int v;
         cin >> v;
         if(v != -1)
         {
             input(head, tail, v);
         }
-        else{
+        else
+        {
             break;
         }
     }

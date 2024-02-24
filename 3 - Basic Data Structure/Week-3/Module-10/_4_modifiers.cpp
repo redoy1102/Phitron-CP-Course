@@ -65,8 +65,8 @@ int main(){
     t = 1;
     while(t--){
         // solve();
-        // insert_practice();
-        delete_p();
+        insert_practice();
+        // delete_p();
         // find_p();
     }
 
