@@ -1,13 +1,16 @@
 #include<bits/stdc++.h>
 using namespace std;
-
 int main(){
-    int ar[6] = {10, 50, 4, 9, 3, 1};
-    sort(ar, ar+6, greater<int>());
-    
-    for(int i = 0; i < 6; i++)
+    int s;
+    cin >> s;
+    int num[s];
+    for (int i = 0; i < s; i++)
     {
-        printf("%d ", ar[i]);
+        cin >> num[i];
     }
-    return 0;
+    sort(num, num + 5, greater<int>());
+    for (int i = 0; i < s; i++)
+    {
+        cout<< num[i]<<" ";
+    }
 }
