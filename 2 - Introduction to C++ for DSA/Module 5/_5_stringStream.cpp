@@ -1,15 +1,15 @@
 #include<bits/stdc++.h>
 using namespace std;
 void solve(){
-    string s;
-
-    //! empty()
-    // if(s.empty()){
-    //     cout << "YES" << endl;
-    // }
-    // else{
-    //     cout << "NO" << endl;
-    // }
+    string s, words;
+    getline(cin, s);
+    int count = 0;
+    stringstream ss(s);
+    while(ss >> words)
+    {
+        count++;
+    }
+    cout << count << endl;
 }
 int main(){
     int t;

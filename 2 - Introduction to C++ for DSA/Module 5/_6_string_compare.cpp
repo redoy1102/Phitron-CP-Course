@@ -1,15 +1,14 @@
 #include<bits/stdc++.h>
 using namespace std;
 void solve(){
-    string s;
-
-    //! empty()
-    // if(s.empty()){
-    //     cout << "YES" << endl;
-    // }
-    // else{
-    //     cout << "NO" << endl;
-    // }
+    string a, b;
+    cin >> a >> b;
+    if(a==b){
+        cout << "Same" << endl;
+    }
+    else{
+        cout << "NO" << endl;
+    }
 }
 int main(){
     int t;

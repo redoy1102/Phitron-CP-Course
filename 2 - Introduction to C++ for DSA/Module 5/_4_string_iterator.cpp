@@ -2,14 +2,12 @@
 using namespace std;
 void solve(){
     string s;
-
-    //! empty()
-    // if(s.empty()){
-    //     cout << "YES" << endl;
-    // }
-    // else{
-    //     cout << "NO" << endl;
-    // }
+    cin >> s;
+    // string::iterator it;
+    for (auto it = s.begin(); it != s.end(); it++)
+    {
+        cout << *it << endl;
+    }
 }
 int main(){
     int t;
