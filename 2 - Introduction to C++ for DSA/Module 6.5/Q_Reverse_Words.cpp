@@ -31,8 +31,6 @@ void solve(){
             cout << word << endl;
         }
     }
-
-
 }
 int main(){
     int t;
