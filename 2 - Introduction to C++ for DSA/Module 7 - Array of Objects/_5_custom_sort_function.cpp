@@ -10,7 +10,6 @@ bool cmp(Student a, Student b)
 {
     // ascending sort
     return a.marks <= b.marks;
-
     // // descending sort
     // return a.marks >= b.marks;
 }
@@ -33,7 +32,6 @@ int main(){
         cout << s[i].name << endl;
         cout << s[i].roll << endl;
         cout << s[i].marks << endl
-             << endl
              << endl;
     }
     
