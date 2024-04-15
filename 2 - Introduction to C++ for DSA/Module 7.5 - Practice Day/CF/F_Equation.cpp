@@ -6,7 +6,7 @@ using namespace std;
 void solve()
 {
     int x, n;
-    cin>>x>>n;
+    cin >> x >> n;
     ll sum = 0;
     ll m = 1;
 
@@ -20,8 +20,8 @@ void solve()
       m = 1;
       // sum += pow(x*1.0, i*1.0);
     }
-    
-    cout<<sum<<endl;
+
+    cout << sum << endl;
 }
 int main()
 {
