@@ -9,13 +9,13 @@ int main(){
     // }
 
     //! 2
-    // vector<int> v={1,2,3,7};
-    // vector<int> v1 = {4, 5, 6};
-    // v.insert(v.begin()+3, v1.begin(), v1.end());
+    vector<int> v = {1, 2, 3, 7};
+    vector<int> v1 = {4, 5, 6};
+    v.insert(v.begin() + 3, v1.begin(), v1.end());
 
-    // for(int i : v){
-    //     cout << i << " ";
-    // }
+    for(int i : v){
+        cout << i << " ";
+    }
 
     //! 3
     // vector<int> v={1,2,3,7};
@@ -25,11 +25,11 @@ int main(){
     // }
 
     //! 4
-    vector<int> v={1,2,3,4,5,6,7};
-    v.erase(v.begin() + 2, v.begin()+5);
-    for(int i:v){
-        cout << i<<" ";
-    }
+    // vector<int> v={1,2,3,4,5,6,7};
+    // v.erase(v.begin() + 2, v.begin()+5);
+    // for(int i:v){
+    //     cout << i<<" ";
+    // }
 
     return 0;
 }
