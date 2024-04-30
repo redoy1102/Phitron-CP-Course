@@ -13,14 +13,32 @@ class Node{
     }
 };
 
+void print(Node *head)
+{
+    if(head == NULL)
+    {
+        cout<<"List is empty"<<endl<<endl;
+        return;
+    }
+    cout<<"Values of the list: ";
+    Node *temp = head;
+    while(temp != NULL)
+    {
+        cout<<temp->value<<" ";
+        temp=temp->next;
+    }
+    cout<<endl<<endl;
+}
 void insert_at_tail(Node *&head)
 {
+    cout<<"Enter a number: ";
     int v;  cin>>v;
     Node *newNode = new Node(v);
 
     if(head==NULL)
     {
         head = newNode;
+        cout<<v<<" is inserted"<<endl<<endl;
         return;
     }
     Node *temp=head;
@@ -29,18 +47,7 @@ void insert_at_tail(Node *&head)
         temp=temp->next;
     }
     temp->next=newNode;
-    cout<<v<<" is added in tail"<<endl;
-}
-void print(Node *head)
-{
-    cout<<"Values of the list: ";
-    Node *temp = head;
-    while(temp != NULL)
-    {
-        cout<<temp->value<<" ";
-        temp=temp->next;
-    }
-    cout<<endl;
+    cout<<v<<" is inserted"<<endl<<endl;
 }
 void insert_at_head(Node *&head, int v)
 {
@@ -56,13 +63,14 @@ void insert_at_any(Node *&head)
 
     cout<<"Enter the index number: ";
     int index;  cin>>index;
+    
 
     if(index == 0)
     {
         insert_at_head(head, v);
+        cout<<v<<" is inserted or head updated."<<endl<<endl;
         return;
     }
-
     Node *temp=head;
     index--;
     while(index--)
@@ -71,7 +79,7 @@ void insert_at_any(Node *&head)
     }
     newNode->next=temp->next;
     temp->next=newNode;
-    cout<<v<<" is added."<<endl;
+    cout<<v<<" is inserted."<<endl<<endl;
 }
 void delete_at_pos(Node *&head, int p)
 {
@@ -84,19 +92,30 @@ void delete_at_pos(Node *&head, int p)
     Node *d = temp->next;
     temp->next=temp->next->next;
     delete d;
+    cout<<"Deleted"<<endl<<endl;
 }
+void delete_head(Node *&head)
+{
+    Node *dHead = head;
+    head = head->next;
+    delete dHead;
+    cout<<"Head deleted or updated."<<endl<<endl;
+}
+
 void solve()
 {
     Node *head = NULL;
     while(true)
     {
-        cout<<"1 for print."<<endl;
-        cout<<"2 for insert at tail"<<endl;
-        cout<<"3 for insert at any"<<endl;
-        cout<<"4 for insert at head."<<endl;
-        cout<<"5 for delete a node."<<endl;
-        cout<<"0 for break"<<endl;
+        cout<<"1 to print."<<endl;
+        cout<<"2 to insert at tail"<<endl;
+        cout<<"3 to insert at any"<<endl;
+        cout<<"4 to insert at head."<<endl;
+        cout<<"5 to delete a node."<<endl;
+        cout<<"6 to delete the head"<<endl;
+        cout<<"0 to break"<<endl;
         cout<<"Choose your option: ";
+        
         int opt;    cin>>opt;
         if(opt==1)  print(head);
         else if(opt==2) insert_at_tail(head);
@@ -110,9 +129,15 @@ void solve()
             int p;
             cout<<"Enter the position to delete: ";
             cin>>p;
-            delete_at_pos(head, p);
+            if(p==0)
+            {
+                delete_head(head);
+            }
+            else{
+                delete_at_pos(head, p);
+            }
         }
-        
+        else if(opt==6) delete_head(head);
         else    break;
     }
 }
